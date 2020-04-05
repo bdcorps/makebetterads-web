@@ -3,6 +3,7 @@ let bodyParser = require("body-parser");
 var path = require("path");
 var cors = require("cors");
 const app = express();
+var cfenv = require('cfenv');
 const Tabletop = require("tabletop");
 
 app.set("port", 4001);
@@ -45,9 +46,10 @@ app.get("/data", async (req, res) => {
 });
 
 
-//specifying the listening port
-var server = app.listen(app.get("port"), HOST, function() {
-  console.log(
-    "The back end server is running on http://localhost:" + app.get("port")
-  );
+var appEnv = cfenv.getAppEnv();
+// console.log(appEnv);
+// start server on the specified port and binding host
+app.listen(appEnv.port, '0.0.0.0', function() {
+	// print a message when the server starts listening
+	console.log("server starting on " + appEnv.url);
 });
