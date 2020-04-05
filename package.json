@@ -1,0 +1,13 @@
+{
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "ejs": "^3.0.2",
+        "express": "*",
+        "redis": "2.8.0",
+        "tabletop": "^1.6.2"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
