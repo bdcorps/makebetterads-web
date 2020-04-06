@@ -28,13 +28,16 @@ const fetchDataFromSheet = async () => {
   });
 };
 
-
 app.get("/", async (req, res) => {
+  res.render("landing.ejs");
+  });
+
+app.get("/app", async (req, res) => {
   
   var sheetData = JSON.stringify(await fetchDataFromSheet(), null, 2);
-  // console.log(sheetData);
 res.render("index.ejs", {data: sheetData});
 });
+
 
 //defining the root endpoint
 app.get("/data", async (req, res) => {

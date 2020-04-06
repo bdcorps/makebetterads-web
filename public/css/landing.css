@@ -1,0 +1,15 @@
+/* *{border:1px solid black;} */
+h1,p{color:black;}
+
+h1{font-size: 3rem;}
+p{font-size: 1.25rem;margin-top: 2rem;}
+button{
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    background-color: #6320CF;
+    color:white;
+    border:none;border-radius:5px;
+}
+
+.info{padding:4rem;}
+
+
